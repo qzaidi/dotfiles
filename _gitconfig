@@ -1,0 +1,13 @@
+[user]
+    name = Qasim Zaidi
+    email = qasim@zaidi.me
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+
+[push]
+    default = matching
+[core]
+    editor = vim
