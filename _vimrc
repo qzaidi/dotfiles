@@ -2,6 +2,8 @@ filetype on
 filetype plugin on
 filetype plugin indent on
 syntax on
+set ts=4
+set sw=4
 
 function! s:insert_gates()
   let gatename = substitute(toupper(expand("%:t")), "\\.", "_", "g")
@@ -12,5 +14,5 @@ function! s:insert_gates()
 endfunction
 
 autocmd BufNewFile *.{h} call <SID>insert_gates()
-
+au BufNewFile,BufRead *.ejs set filetype=html
 nmap <C-x> :w<CR>:make<CR>:cw<CR>
