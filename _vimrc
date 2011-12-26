@@ -2,8 +2,7 @@ filetype on
 filetype plugin on
 filetype plugin indent on
 syntax on
-set ts=4
-set sw=4
+set tabstop=2 shiftwidth=2 expandtab
 
 function! s:insert_gates()
   let gatename = substitute(toupper(expand("%:t")), "\\.", "_", "g")
