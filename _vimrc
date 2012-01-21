@@ -3,6 +3,7 @@ filetype plugin on
 filetype plugin indent on
 syntax on
 set tabstop=2 shiftwidth=2 expandtab
+set diffopt+=iwhite
 
 function! s:insert_gates()
   let gatename = substitute(toupper(expand("%:t")), "\\.", "_", "g")
@@ -15,3 +16,5 @@ endfunction
 autocmd BufNewFile *.{h} call <SID>insert_gates()
 au BufNewFile,BufRead *.ejs set filetype=html
 nmap <C-x> :w<CR>:make<CR>:cw<CR>
+
+highlight DiffChange cterm=none ctermbg=Yellow

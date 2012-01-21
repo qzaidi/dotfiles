@@ -6,7 +6,7 @@ function link_file {
   target="${HOME}/${1/_/.}"
 
   if [ -e "${target}" ]; then
-	mv $target $target.bak
+	  mv $target $target.bak
   fi
 
   ln -sf ${source} ${target}
@@ -16,3 +16,6 @@ for i in _*
   do
 	link_file $i
   done
+
+mkdir -p ~/bin
+ln -sf ${PWD}/gitdiff ~/bin/gitdiff

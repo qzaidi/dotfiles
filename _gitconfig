@@ -14,3 +14,15 @@
 
 [alias] 
     st = status
+    ca = commit --amend -C HEAD
+    dh = diff HEAD
+    dd = diff origin/inventory
+    ds = diff origin/stage
+    dm = diff origin/master
+    md = checkout origin/development
+
+[diff]
+    external = gitdiff
+
+[pager]
+    diff =
