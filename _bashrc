@@ -3,4 +3,4 @@ alias vi=vim
 EDITOR=vim
 export EDITOR
 
-export PATH=$PATH:~/bin
+export PATH=$PATH:/usr/local/sbin:/usr/local/go/bin:~/bin

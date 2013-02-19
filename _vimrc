@@ -17,4 +17,6 @@ autocmd BufNewFile *.{h} call <SID>insert_gates()
 au BufNewFile,BufRead *.ejs set filetype=html
 nmap <C-x> :w<CR>:make<CR>:cw<CR>
 
+cmap w!! %!sudo tee > /dev/null %
+
 highlight DiffChange cterm=none ctermbg=Yellow
