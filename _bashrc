@@ -1,4 +1,5 @@
 alias vi=vim
+alias phpstat='SCRIPT_NAME=/status REQUEST_METHOD=GET QUERY_STRING=full SCRIPT_FILENAME=/status cgi-fcgi -bind -connect /var/run/php5-fpm-www.paytm.com.socket'
 
 EDITOR=vim
 export EDITOR

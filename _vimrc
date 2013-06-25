@@ -2,7 +2,7 @@ filetype on
 filetype plugin on
 filetype plugin indent on
 syntax on
-set tabstop=2 shiftwidth=2 expandtab
+set tabstop=2 shiftwidth=2 expandtab modelines=3
 set diffopt+=iwhite
 
 function! s:insert_gates()
