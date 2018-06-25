@@ -4,4 +4,7 @@ alias phpstat='SCRIPT_NAME=/status REQUEST_METHOD=GET QUERY_STRING=full SCRIPT_F
 EDITOR=vim
 export EDITOR
 
-export PATH=$PATH:/usr/local/sbin:/usr/local/go/bin:~/bin
+export GOPATH=/Users/qasim/Source/go
+
+export PATH=~/bin:$PATH:/usr/local/sbin:/usr/local/go/bin:~/bin:$GOPATH/bin
+
