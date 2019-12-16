@@ -13,7 +13,18 @@ function! s:insert_gates()
   normal! kk
 endfunction
 
+function! s:init_golang()
+  let gatename = split(expand("%:p:h"),'/')[-1]
+  execute "normal! ipackage " . gatename
+  execute "normal! oimport ("
+  execute "normal! ojww \"github.com/spf13/jwalterweatherman\""
+  execute "normal! Go)"
+  normal! kk
+endfunction
+
 autocmd BufNewFile *.{h} call <SID>insert_gates()
+autocmd BufNewFile *.{go} call <SID>init_golang()
+
 au BufNewFile,BufRead *.ejs set filetype=html
 nmap <C-x> :w<CR>:make<CR>:cw<CR>
 
